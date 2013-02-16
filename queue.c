@@ -22,6 +22,7 @@ queue* create_queue(int size)
     }
 
     new_queue->next = new_queue-> queue_base; // start at the base
+    new_queue->head = new_queue-> queue_base; // start at the base
     new_queue->queue_alert_en = 0;
     new_queue->queue_alert_de = 1;
 
@@ -41,6 +42,7 @@ int enqueue( queue* Q, void* ptr)
     {
         return enden(Q,ptr); // go to the special function
     }
+    Q->queue_alert_de=0;
     Q->queue_alert_en = 1;  // nothing will be introduced if something is already there
 
     *(Q->next) = ptr;    // introduce ptr
@@ -67,6 +69,7 @@ void* dequeue(queue* Q)
     }
 
     Q->queue_alert_de = 1;
+    Q->queue_alert_en = 0;
 
     if( Q->head_pos == (Q->max_cells)-1 )  // particular case head is at the end
         return endde(Q);   // special function to analyze and return
@@ -81,8 +84,8 @@ void* dequeue(queue* Q)
 
 void* endde(queue* Q)
 {
-    void* ptr = *(Q->head);
+    void** ptr = Q->head;
     Q->head_pos = 0;
     Q->head = Q->queue_base;
-    return ptr;
+    return (*ptr);
 }

@@ -31,11 +31,23 @@ int main()
         else
             printf("enqueuing: x = %5d, y = %10.3f\n", (ex+i)->x, (ex+i)->y);
 
+    if(!(ret_ex = (test *) dequeue(new_queue)))
+        printf("queue empty\n");
+    else
+        printf("Dequeued:  x = %5d, y = %10.3f\n", ret_ex->x, ret_ex->y);
+
+    if( enqueue(new_queue, (void *)(ex+4)) < 0)
+        printf("queue is full\n");
+    else
+        printf("enqueuing: x = %5d, y = %10.3f\n", (ex+4)->x, (ex+4)->y);
+
+
+
     for(i=0; i<5; i++)
         if(!(ret_ex = (test *) dequeue(new_queue)))
             printf("queue empty\n");
         else
-            printf("Enqueued:  x = %5d, y = %10.3f\n", ret_ex->x, ret_ex->y);
+            printf("Dequeued:  x = %5d, y = %10.3f\n", ret_ex->x, ret_ex->y);
 
     return 0;
 }

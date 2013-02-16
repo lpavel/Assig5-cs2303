@@ -7,7 +7,7 @@ typedef struct {
   double y;
 } Foo; // Just some arbitrary struct
 
-/*
+
 int main() {
   const int max_entries = 5; // size of stack
   Foo* new_foo1;
@@ -96,4 +96,4 @@ int main() {
   }
   return 0;
 }
-*/
+

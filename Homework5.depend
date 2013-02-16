@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1361042242 source:c:\github\assig5-cs2303\queue.c
+1361046262 source:c:\github\assig5-cs2303\queue.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -13,7 +13,7 @@
 
 1360974561 c:\github\assig5-cs2303\stack.h
 
-1361038400 source:c:\github\assig5-cs2303\main.c
+1361045587 source:c:\github\assig5-cs2303\main.c
 	<stdio.h>
 	<stdlib.h>
 	"queue.h"
