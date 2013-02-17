@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1361068172 source:c:\github\assig5-cs2303\homework5-part5\trees.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"trees.h"
+
+1361065947 c:\github\assig5-cs2303\homework5-part5\trees.h
+
+1361069679 source:c:\github\assig5-cs2303\homework5-part5\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"trees.h"
+
